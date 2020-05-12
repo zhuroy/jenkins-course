@@ -1,5 +1,5 @@
-node {
-    def myGradleContainer = docker.image('gradle:jdk8-alpine')
+node("jenkins_master") {
+    def myGradleContainer = docker.image('gradle:jdk8')
     myGradleContainer.pull()
 
     stage('prep') {
