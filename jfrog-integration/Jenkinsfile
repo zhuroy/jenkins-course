@@ -1,4 +1,4 @@
-node {
+node("jenkins_master") {
     def server = Artifactory.server('localhost')
     def rtGradle = Artifactory.newGradleBuild()
     def buildInfo = Artifactory.newBuildInfo()
